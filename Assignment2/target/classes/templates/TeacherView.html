@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:th1="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Teachers</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+<table  border="1">
+    <thead>
+    <tr>
+        <th>teacher.ID</th>
+        <th>teacher.NAME</th>
+        <th>teacher.PASSWORD</th>
+        <th>teacher.EMAIL</th>
+        <th>teacher.AGE</th>
+        <th>course entire data</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="teacher : ${ teachersWithCoursesList }">
+
+        <td th:text="${ teacher.id }">ID</td>
+        <td th:text="${ teacher.name }"></td>
+        <td th:text="${ teacher.password }"></td>
+        <td th:text="${ teacher.email }"></td>
+        <td th:text="${ teacher.age }"></td>
+        <td th1:text="${ teacher.courses }">
+            <p th:each="course: ${ teacher.courses  }">
+                <span th:text="${course.id}"></span>
+                <span th:text="${course.name}"></span>
+            </p>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+<br/>
+<br/>
+
+<form   th:object="${newTeacher}" method="post">
+    <div class="col-sm-12">
+        <label>Name</label>
+        <input placeholder="Teacher Name" name="name"/>
+    </div>
+    <div class="col-sm-12">
+        <label>Password</label>
+        <input placeholder="Teacher password" name="password"/>
+    </div>
+    <div class="col-sm-12">
+        <label>Email</label>
+        <input placeholder="Teacher email" name="email"/>
+    </div>
+
+    <button type="submit" class = "btn btn-primary">ADD Teacher</button>
+</form>
+
+</body>
+

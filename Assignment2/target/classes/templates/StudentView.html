@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:th1="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+<table  border="1">
+    <thead>
+    <tr>
+        <th>student.id</th>
+        <th>student.name</th>
+        <th>student.password</th>
+        <th>student.email</th>
+        <th>student.age</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<br/>
+<br/>
+<br/>
+
+<form   th:object="${newStudent}" method="post">
+    <div class="col-sm-12">
+        <label>Name</label>
+        <input placeholder="Student Name" name="name"/>
+    </div>
+    <div class="col-sm-12">
+        <label>Password</label>
+        <input placeholder="Student password" name="password"/>
+    </div>
+    <div class="col-sm-12">
+        <label>age</label>
+        <input placeholder="Student age" name="age"/>
+    </div>
+    <div class="col-sm-12">
+        <label>Email</label>
+        <input placeholder="Student email" name="email"/>
+    </div>
+
+    <button type="submit" class = "btn btn-primary">ADD Teacher</button>
+</form>
+
+</body>
+

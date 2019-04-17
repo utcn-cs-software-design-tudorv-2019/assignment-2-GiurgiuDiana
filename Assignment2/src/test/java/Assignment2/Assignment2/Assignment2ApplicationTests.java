@@ -1,17 +1,13 @@
 package Assignment2.Assignment2;
 
-import C.CourseController;
-import C.TeacherController;
-import M.Entities.Course;
-import M.Entities.Student;
-import M.Entities.Teacher;
-import M.Repository.TeacherRepository;
-import M.Services.TeacherService;
+import project.C.CourseController;
+import project.C.TeacherController;
+import project.M.Entities.Teacher;
+import project.M.Services.TeacherService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.inject.Inject;
 
