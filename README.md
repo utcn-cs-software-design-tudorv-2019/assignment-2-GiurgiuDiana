@@ -17,5 +17,9 @@ org.postgresql.util.PSQLException: ERROR: relation "teacher" does not exist
 Issue: can not resolve error for the past 2 day. Online not helping
 
 SOLVED
+
+
 ALso finished testing the CRUD repositoryies.
+
+
 Finished making GRADE_VIEW, COURSE VIEW , STUDENT VIEW AND TEACHER VIEW.
